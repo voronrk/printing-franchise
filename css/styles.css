@@ -5,3 +5,9 @@
 .investment {
     background-image: url('/img/advantages_back.png')
 }
+
+.is-sticky {
+    position:sticky;
+    position:-webkit-sticky;
+    top:10px;
+}
