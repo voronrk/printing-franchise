@@ -7,7 +7,7 @@
     <title>Франшиза рекламного агентства «Printing»: цена, описание, отзывы</title>
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="/js/script.js" defer></script>
+    <script src=/js/script.js?<?=time()?> defer></script>
 </head>
 <body>
     <div class="container px-2">
@@ -55,7 +55,7 @@
                         <img src="img/call_icon.svg" class="mr-2">
                         Заказать звонок
                     </button>
-                    <button class="button is-primary mt-1 is-fullwidth send-order">
+                    <button class="button is-primary mt-1 is-fullwidth form-show">
                         <img src="img/envelope.svg" class="mr-2">
                         Отправить заявку
                     </button>
@@ -282,7 +282,7 @@
                         <div class="mt-2 pl-4"><a class="has-text-black menu-item" href="#08">- Фото и видео</a></div>
                         <div class="mt-2 pl-4"><a class="has-text-black menu-item" href="#09">- Расчет прибыли</a></div>
                         <div class="mt-2"><a class="has-text-black menu-item" href="#10">Отзывы франчайзи</a></div>
-                        <div class="mt-2"><a class="has-text-black send-order">Подробный бизнес-план</a></div>
+                        <div class="mt-2"><a class="has-text-black form-show">Подробный бизнес-план</a></div>
                     </div>
 
                     <div class="box">
@@ -297,7 +297,7 @@
                             <p class="title is-6 has-text-weight-bold">Арсений Девдариани</p>
                             </div>
                         </div>
-                        <button class="button is-primary mt-1 is-fullwidth send-order">
+                        <button class="button is-primary mt-1 is-fullwidth form-show">
                             <img src="img/envelope.svg" class="mr-2">
                             Отправить заявку
                         </button>
@@ -307,12 +307,39 @@
         </div>
 
     </div>
-    <div id="modal" class="modal">
+    <div id="modal-form" class="modal">
         <div class="modal-background mclose"></div>
         <div class="modal-content">
             <div class="card">
-                <div id="modal-message" class="card-content">
+                <form id="order-form" class="card-content" action="">
+                    <div class="subtitle is-size-3 has-text-centered">Отправить заявку</div>
+                    <div id="sending-error" class="has-text-danger is-size-7 is-hidden">Ошибка отправки заявки. Попробуйте ещё раз.</div>
+                    <textarea name="comment" class="textarea mt-4" cols="30" rows="3" placeholder="Сообщение">Заинтересовала ваша франшиза! Вышлите на почту бизнес-план и подробную информацию о франшизе.</textarea>
+                    <input name="name" type="text" class="input mt-4" placeholder="Имя" required>
+                    <div id="no-name" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, имя.</div>
+                    <input name="city" type="text" class="input mt-4" placeholder="Город" required>
+                    <div id="no-city" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, город.</div>
+                    <input name="email" type="e-mail" class="input mt-4" placeholder="E-mail" required>
+                    <div id="no-email" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, e-mail.</div>
+                    <input name="phone" type="tel" class="input mt-4" placeholder="Телефон">
+                    <button id="send-order" class="button is-primary mt-4 is-fullwidth">
+                        <img src="img/envelope.svg" class="mr-2">
+                        Отправить заявку
+                    </button>
+                    <div class="text">Ваши данные в полной безопасности и будут переданы только представителям франшизы. Отправляя заявку, вы даёте своё согласие  на обработку персональных данных.</div>
+                </form>
+            </div>
+        </div>
+        <button id="modal-close" class="modal-close is-large mclose" aria-label="close"></button>
+    </div>
 
+    <div id="modal-message" class="modal">
+        <div class="modal-background mclose"></div>
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-content">
+                    <div class="text is-size-4 has-text-centered">Заявка отправлена</div>
+                    <button class="button is-primary mt-4 is-fullwidth mclose">Закрыть</button>
                 </div>
             </div>
         </div>
