@@ -7,7 +7,12 @@
     <title>Франшиза рекламного агентства «Printing»: цена, описание, отзывы</title>
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <script src=/js/jquery-3.6.1.min.js defer></script>
+    <script src=/js/owl.carousel.min.js defer></script>
     <script src=/js/script.js?<?=time()?> defer></script>
+
 </head>
 <body>
     <div class="container px-2">
@@ -21,7 +26,7 @@
         </nav>
 
         <div class="columns mt-4">
-            <div class="column">
+            <div class="column is-9">
                 <p class="has-text-centered"><img src="img/top-banner.jpg" alt="«Printing» — франшиза рекламного агентства" title="«Printing» — франшиза рекламного агентства"></p>
             </div>
             <div class="column is-3">
@@ -51,10 +56,6 @@
                           <p class="title is-6 has-text-weight-bold">Арсений Девдариани</p>
                         </div>
                     </div>
-                    <button class="button is-primary mt-1 is-fullwidth">
-                        <img src="img/call_icon.svg" class="mr-2">
-                        Заказать звонок
-                    </button>
                     <button class="button is-primary mt-1 is-fullwidth form-show">
                         <img src="img/envelope.svg" class="mr-2">
                         Отправить заявку
@@ -64,7 +65,7 @@
         </div>
 
         <div class="columns mt-4">
-            <div class="column content">
+            <div class="column is-9 content">
                 <div class="subtitle is-size-3"><a class="anchor-title" name="01"></a>О компании и бизнесе</div>
                 <p class="has-text-justified mb-3"><b>«Printing»</b> — это эксклюзивная SAAS-система для управления полиграфическим бизнесом, которая включает несколько модулей: калькулятор заказов, CRM-систему, управление производством, уникальную партнерскую программу и интернет-магазин полиграфии (web-to-print).</p>
                 <p class="has-text-justified mb-3">Система полностью автоматизирует работу рекламного агентства, позволяет войти в этот бизнес тем, кто не имеет достаточно опыта работы в полиграфии, помогает агентствам получать заказы, а клиентам оперативно заказывать полиграфию: от визиток, листовок, буклетов до календарей любого формата и сложности. Цифровая платформа «Printing» уникальна по функционалу и идеально подходит тем, кто хочет работать в полиграфическом бизнесе.</p>
@@ -226,6 +227,59 @@
 
                 <div class="box has-background-light"><a class="anchor-title" name="08"></a>
                     <div class="subtitle has-text-centered is-size-4">Фото</div>
+                    <div class="owl-carousel">
+                        <div class="owl-stage">
+                        <div><img class="carousel-img" src="img/carousel-01.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-02.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-03.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-04.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-05.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-06.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-07.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-08.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-09.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-10.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-11.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-12.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-13.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-14.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-15.jpg"></div>
+                        <div><img class="carousel-img" src="img/carousel-16.jpg"></div>
+                        </div>
+                        <div class="owl-nav">
+                            <div class="owl-prev"><</div>
+                            <div class="owl-next">></div>
+                        </div>
+                        <div class="owl-dots"></div>
+                    </div>
+                    <!-- <div class="owl-carousel">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage">
+                                <div><img class="owl-item carousel-img" src="img/carousel-01.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-02.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-03.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-04.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-05.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-06.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-07.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-08.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-09.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-10.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-11.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-12.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-13.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-14.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-15.jpg"></div>
+                                <div><img class="owl-item carousel-img" src="img/carousel-16.jpg"></div>
+                            </div>
+                        </div>
+                        <div class="owl-nav">
+                            <div class="owl-prev"><</div>
+                            <div class="owl-next">></div>
+                        </div>
+                        <div class="owl-dots"></div>
+                    </div> -->
+
                     <div class="subtitle has-text-centered is-size-4 mt-6">Видео</div>
                 </div>
 

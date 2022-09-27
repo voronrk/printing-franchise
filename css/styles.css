@@ -19,3 +19,7 @@ html {
 .menu-item:hover {
     font-weight:bold;
 }
+
+.carousel-img {
+    height:250px;
+}

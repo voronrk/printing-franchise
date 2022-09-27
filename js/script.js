@@ -14,6 +14,15 @@ const modalClose = document.querySelectorAll('.mclose');
 let formData = {};
 orderForm.reset();
 
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        margin:10,
+        loop:true,
+        autoWidth:true,
+        items:3,
+    })
+  });
+
 btnsForms.forEach((btn) => {
     btn.addEventListener('click', () => {
         modalForm.classList.add('is-active');
