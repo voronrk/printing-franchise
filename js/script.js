@@ -22,8 +22,8 @@ $(document).ready(function(){
         nav: true,
         dots: false,
         navText: [
-            '<img src="img/arrow_left_white.svg" alt="left" title="left" width="20" height="23">',
-            '<img src="img/arrow_right_white.svg" alt="left" title="left" width="20" height="23">'
+            '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="40" height="43">',
+            '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="40" height="43">'
         ]
     })
   });
@@ -36,8 +36,8 @@ $(document).ready(function(){
         nav: true,
         dots: false,
         navText: [
-            '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="20" height="23">',
-            '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="20" height="23">'
+            '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="40" height="43">',
+            '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="40" height="43">'
         ]
     })
   });
