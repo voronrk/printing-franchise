@@ -23,3 +23,33 @@ html {
 .carousel-img {
     height:250px;
 }
+
+.owl-theme .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 50%;
+    z-index: 999;
+}
+
+.owl-nav .owl-prev img {
+    position: absolute;
+    left: 10px;
+    top: -25px;
+    opacity:0;
+}
+
+.owl-nav .owl-next img {
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    opacity:0;
+}
+
+.owl-carousel:hover .owl-nav .owl-prev img {
+    opacity:100;
+}
+
+.owl-carousel:hover .owl-nav .owl-next img {
+    opacity:100;
+}

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Франшиза рекламного агентства «Printing»: цена, описание, отзывы</title>
     <link rel="stylesheet" href="css/bulma.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src=/js/jquery-3.6.1.min.js defer></script>
     <script src=/js/owl.carousel.min.js defer></script>
     <script src=/js/script.js?<?=time()?> defer></script>
@@ -216,6 +216,12 @@
 
                 <div class="box has-background-light"><a class="anchor-title" name="06"></a>
                     <div class="subtitle is-size-4">Отзывы моих франчайзи</div>
+                    <div class="column has-text-centered">
+                        <div id='carousel-video' class="owl-carousel owl-loaded owl-theme">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GeNQ_qFivY4" title="Отзыв Сергей Корнух" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MEyG0wcM0A0" title="Отзыв Павел Игнатенко" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="subtitle is-size-3"><a class="anchor-title" name="07"></a>Пакет франшизы</div>
@@ -227,8 +233,7 @@
 
                 <div class="box has-background-light"><a class="anchor-title" name="08"></a>
                     <div class="subtitle has-text-centered is-size-4">Фото</div>
-                    <div class="owl-carousel">
-                        <div class="owl-stage">
+                    <div id='carousel-photo' class="owl-carousel owl-loaded owl-theme">
                         <div><img class="carousel-img" src="img/carousel-01.jpg"></div>
                         <div><img class="carousel-img" src="img/carousel-02.jpg"></div>
                         <div><img class="carousel-img" src="img/carousel-03.jpg"></div>
@@ -245,42 +250,12 @@
                         <div><img class="carousel-img" src="img/carousel-14.jpg"></div>
                         <div><img class="carousel-img" src="img/carousel-15.jpg"></div>
                         <div><img class="carousel-img" src="img/carousel-16.jpg"></div>
-                        </div>
-                        <div class="owl-nav">
-                            <div class="owl-prev"><</div>
-                            <div class="owl-next">></div>
-                        </div>
-                        <div class="owl-dots"></div>
                     </div>
-                    <!-- <div class="owl-carousel">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage">
-                                <div><img class="owl-item carousel-img" src="img/carousel-01.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-02.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-03.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-04.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-05.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-06.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-07.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-08.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-09.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-10.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-11.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-12.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-13.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-14.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-15.jpg"></div>
-                                <div><img class="owl-item carousel-img" src="img/carousel-16.jpg"></div>
-                            </div>
-                        </div>
-                        <div class="owl-nav">
-                            <div class="owl-prev"><</div>
-                            <div class="owl-next">></div>
-                        </div>
-                        <div class="owl-dots"></div>
-                    </div> -->
 
                     <div class="subtitle has-text-centered is-size-4 mt-6">Видео</div>
+                    <div class="column has-text-centered">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xZZDwuJb700" title="Франшиза Printing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
 
                 <div class="box investment">

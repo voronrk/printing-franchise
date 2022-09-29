@@ -15,11 +15,30 @@ let formData = {};
 orderForm.reset();
 
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        margin:10,
-        loop:true,
-        autoWidth:true,
-        items:3,
+    $('#carousel-photo').owlCarousel({
+        margin: 10,
+        loop: true,
+        items: 3,
+        nav: true,
+        dots: false,
+        navText: [
+            '<img src="img/arrow_left_white.svg" alt="left" title="left" width="20" height="23">',
+            '<img src="img/arrow_right_white.svg" alt="left" title="left" width="20" height="23">'
+        ]
+    })
+  });
+
+$(document).ready(function(){
+    $('#carousel-video').owlCarousel({
+        margin: 10,
+        loop: true,
+        items: 1,
+        nav: true,
+        dots: false,
+        navText: [
+            '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="20" height="23">',
+            '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="20" height="23">'
+        ]
     })
   });
 
