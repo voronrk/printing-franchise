@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src=/js/jquery-3.6.1.min.js defer></script>
-    <script src=/js/owl.carousel.min.js defer></script>
-    <script src=/js/script.js?<?=time()?> defer></script>
+    <script src=js/jquery-3.6.1.min.js defer></script>
+    <script src=js/owl.carousel.min.js defer></script>
+    <script src=js/script.js?<?=time()?> defer></script>
 
 </head>
 <body>
@@ -270,7 +270,7 @@
                 <div class="box has-background-light"><a class="anchor-title" name="10"></a>
                     <div class="subtitle has-text-centered is-size-3">Отзывы о франшизе «Printing»</div>
                     <div class="has-text-centered">Поделитесь своим мнением о франшизе!</div>
-                    <div class="has-text-centered mt-4"><button class="button">Оставить отзыв</button></div>
+                    <div class="has-text-centered mt-4"><button id="button-feedback" class="button">Оставить отзыв</button></div>
                 </div>
 
             </div>
@@ -350,7 +350,8 @@
                     <div id="no-city" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, город.</div>
                     <input name="email" type="e-mail" class="input mt-4" placeholder="E-mail" required>
                     <div id="no-email" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, e-mail.</div>
-                    <input name="phone" type="tel" class="input mt-4" placeholder="Телефон">
+                    <input name="phone" type="tel" class="input mt-4" placeholder="Телефон" required>
+                    <div id="no-phone" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, телефон.</div>
                     <button id="send-order" class="button is-primary mt-4 is-fullwidth">
                         <img src="img/envelope.svg" class="mr-2">
                         Отправить заявку
@@ -362,12 +363,46 @@
         <button id="modal-close" class="modal-close is-large mclose" aria-label="close"></button>
     </div>
 
+    <div id="modal-feedback" class="modal">
+        <div class="modal-background mclose"></div>
+        <div class="modal-content">
+            <div class="card">
+                <form id="feedback-form" class="card-content" action="">
+                    <div class="subtitle is-size-3 has-text-centered">Отзыв по франшизе</div>
+                    <div class="subtitle is-size-6 has-text-centered">Ваш отзыв будет опубликован на сайте только после прохождения модерации</div>
+                    <div id="sending-error-feedback" class="has-text-danger is-size-7 is-hidden">Ошибка отправки отзыва. Попробуйте ещё раз.</div>
+                    <textarea name="comment" class="textarea mt-4" cols="30" rows="3" placeholder="Отзыв"></textarea>
+                    <div id="no-comment-feedback" class="has-text-danger is-size-7 is-hidden">Напишите, пожалуйста, отзыв.</div>
+                    <input name="name" type="text" class="input mt-4" placeholder="Имя" required>
+                    <div id="no-name-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, имя.</div>
+                    <input name="city" type="text" class="input mt-4" placeholder="Город" required>
+                    <div id="no-city-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, город.</div>
+                    <input name="email" type="e-mail" class="input mt-4" placeholder="E-mail" required>
+                    <div id="no-email-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, e-mail.</div>
+                    <input name="phone" type="tel" class="input mt-4" placeholder="Телефон" required>
+                    <div id="no-phone-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, телефон.</div>
+                    <input name="address" type="text" class="input mt-4" placeholder="Адрес торговой точки" required>
+                    <div id="no-address-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, адрес.</div>
+                    <!-- <input name="photo" type="file" class="input mt-4" required>
+                    <div class="text">Фото в формате JPG, PNG, BMP размером файла не более 1 Мбайт</div>
+                    <div id="no-photo-feedback" class="has-text-danger is-size-7 is-hidden">Загрузите, пожалуйста, фото.</div> -->
+                    <button id="send-feedback" class="button is-primary mt-4 is-fullwidth">
+                        <img src="img/envelope.svg" class="mr-2">
+                        Отправить отзыв
+                    </button>
+                    <div class="text is-size-7">Отправляя отзыв, вы даёте своё согласие на обработку персональных данных и соглашаетесь с правилами предоставления услуг.</div>
+                </form>
+            </div>
+        </div>
+        <button id="modal-close" class="modal-close is-large mclose" aria-label="close"></button>
+    </div>
+
     <div id="modal-message" class="modal">
         <div class="modal-background mclose"></div>
         <div class="modal-content">
             <div class="card">
                 <div class="card-content">
-                    <div class="text is-size-4 has-text-centered">Заявка отправлена</div>
+                    <div class="text is-size-4 has-text-centered" id='modal-message-text'></div>
                     <button class="button is-primary mt-4 is-fullwidth mclose">Закрыть</button>
                 </div>
             </div>

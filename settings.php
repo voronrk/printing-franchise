@@ -1,3 +1,3 @@
 <?php
 
-define('EMAIL', 'voron_76@mail.ru');
+define('EMAIL', 'ars@printing.ru');
