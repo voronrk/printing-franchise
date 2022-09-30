@@ -23,9 +23,19 @@ $(document).ready(function(){
     $('#carousel-photo').owlCarousel({
         margin: 10,
         loop: true,
-        items: 3,
         nav: true,
         dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            640: {
+                items: 2
+            },
+            768: {
+                items: 3
+            }
+        },
         navText: [
             '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="40" height="43">',
             '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="40" height="43">'
@@ -40,6 +50,7 @@ $(document).ready(function(){
         items: 1,
         nav: true,
         dots: false,
+        video: true,
         navText: [
             '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="40" height="43">',
             '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="40" height="43">'
@@ -68,7 +79,7 @@ modalClose.forEach((item) => {
         document.querySelector('#no-email-feedback').classList.add('is-hidden');
         document.querySelector('#no-phone-feedback').classList.add('is-hidden');
         document.querySelector('#no-address-feedback').classList.add('is-hidden');
-        document.querySelector('#no-photo-feedback').classList.add('is-hidden');
+        // document.querySelector('#no-photo-feedback').classList.add('is-hidden');
         document.querySelector('#no-comment-feedback').classList.add('is-hidden');
     });
 });

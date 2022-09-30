@@ -20,9 +20,9 @@ html {
     font-weight:bold;
 }
 
-.carousel-img {
-    height:250px;
-}
+/* .carousel-img {
+    max-height:250px;
+} */
 
 .owl-theme .owl-nav {
     position: absolute;
@@ -52,4 +52,15 @@ html {
 
 .owl-carousel:hover .owl-nav .owl-next img {
     opacity:100;
+}
+
+.modal {
+    max-width:100vw;
+    max-height:100vh;
+}
+
+.video-frame {
+    max-width:100%;
+    width:560px;
+    height:315px;
 }

@@ -17,7 +17,7 @@
 <body>
     <div class="container px-2">
 
-        <nav class="navbar is-navbar-sticky has-background-light">
+        <nav class="navbar is-navbar-sticky has-background-light desktop-only">
             <div class="navbar-brand ml-2">
                 <a class="navbar-item" href="https://printing.ru/static/franchise/index.html">
                     <span class="navbar-title is-size-3 has-text-weight-semibold ml-3 is-uppercase">«Printing» – франшиза рекламного агентства</span>    
@@ -218,8 +218,10 @@
                     <div class="subtitle is-size-4">Отзывы моих франчайзи</div>
                     <div class="column has-text-centered">
                         <div id='carousel-video' class="owl-carousel owl-loaded owl-theme">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GeNQ_qFivY4" title="Отзыв Сергей Корнух" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MEyG0wcM0A0" title="Отзыв Павел Игнатенко" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="video-frame" src="https://www.youtube.com/embed/GeNQ_qFivY4" title="Отзыв Сергей Корнух" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="video-frame" src="https://www.youtube.com/embed/MEyG0wcM0A0" title="Отзыв Павел Игнатенко" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/GeNQ_qFivY4" title="Отзыв Сергей Корнух" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MEyG0wcM0A0" title="Отзыв Павел Игнатенко" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
                     </div>
                 </div>
@@ -254,7 +256,8 @@
 
                     <div class="subtitle has-text-centered is-size-4 mt-6">Видео</div>
                     <div class="column has-text-centered">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xZZDwuJb700" title="Франшиза Printing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="video-frame" src="https://www.youtube.com/embed/xZZDwuJb700" title="Франшиза Printing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xZZDwuJb700" title="Франшиза Printing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
 
@@ -336,7 +339,7 @@
         </div>
 
     </div>
-    <div id="modal-form" class="modal">
+    <div id="modal-form" class="modal is-clipped">
         <div class="modal-background mclose"></div>
         <div class="modal-content">
             <div class="card">
