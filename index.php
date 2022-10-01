@@ -220,8 +220,6 @@
                         <div id='carousel-video' class="owl-carousel owl-loaded owl-theme">
                             <iframe class="video-frame" src="https://www.youtube.com/embed/GeNQ_qFivY4" title="Отзыв Сергей Корнух" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <iframe class="video-frame" src="https://www.youtube.com/embed/MEyG0wcM0A0" title="Отзыв Павел Игнатенко" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/GeNQ_qFivY4" title="Отзыв Сергей Корнух" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MEyG0wcM0A0" title="Отзыв Павел Игнатенко" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
                     </div>
                 </div>
@@ -257,7 +255,6 @@
                     <div class="subtitle has-text-centered is-size-4 mt-6">Видео</div>
                     <div class="column has-text-centered">
                         <iframe class="video-frame" src="https://www.youtube.com/embed/xZZDwuJb700" title="Франшиза Printing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xZZDwuJb700" title="Франшиза Printing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
 
@@ -343,7 +340,7 @@
         <div class="modal-background mclose"></div>
         <div class="modal-content">
             <div class="card">
-                <form id="order-form" class="card-content" action="">
+                <form id="order-form" class="card-content" enctype="multipart/form-data" action="">
                     <div class="subtitle is-size-3 has-text-centered">Отправить заявку</div>
                     <div id="sending-error" class="has-text-danger is-size-7 is-hidden">Ошибка отправки заявки. Попробуйте ещё раз.</div>
                     <textarea name="comment" class="textarea mt-4" cols="30" rows="3" placeholder="Сообщение">Заинтересовала ваша франшиза! Вышлите на почту бизнес-план и подробную информацию о франшизе.</textarea>
@@ -370,11 +367,11 @@
         <div class="modal-background mclose"></div>
         <div class="modal-content">
             <div class="card">
-                <form id="feedback-form" class="card-content" action="">
+                <form id="feedback-form" class="card-content" enctype="multipart/form-data" action="">
                     <div class="subtitle is-size-3 has-text-centered">Отзыв по франшизе</div>
                     <div class="subtitle is-size-6 has-text-centered">Ваш отзыв будет опубликован на сайте только после прохождения модерации</div>
                     <div id="sending-error-feedback" class="has-text-danger is-size-7 is-hidden">Ошибка отправки отзыва. Попробуйте ещё раз.</div>
-                    <textarea name="comment" class="textarea mt-4" cols="30" rows="3" placeholder="Отзыв"></textarea>
+                    <textarea name="comment" class="textarea mt-4" cols="30" rows="3" placeholder="Отзыв" required></textarea>
                     <div id="no-comment-feedback" class="has-text-danger is-size-7 is-hidden">Напишите, пожалуйста, отзыв.</div>
                     <input name="name" type="text" class="input mt-4" placeholder="Имя" required>
                     <div id="no-name-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, имя.</div>
@@ -386,10 +383,11 @@
                     <div id="no-phone-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, телефон.</div>
                     <input name="address" type="text" class="input mt-4" placeholder="Адрес торговой точки" required>
                     <div id="no-address-feedback" class="has-text-danger is-size-7 is-hidden">Заполните, пожалуйста, адрес.</div>
-                    <!-- <input name="photo" type="file" class="input mt-4" required>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                    <input name="photo" type="file" class="input mt-4" required>
                     <div class="text">Фото в формате JPG, PNG, BMP размером файла не более 1 Мбайт</div>
-                    <div id="no-photo-feedback" class="has-text-danger is-size-7 is-hidden">Загрузите, пожалуйста, фото.</div> -->
-                    <button id="send-feedback" class="button is-primary mt-4 is-fullwidth">
+                    <div id="no-photo-feedback" class="has-text-danger is-size-7 is-hidden">Загрузите, пожалуйста, фото.</div>
+                    <button id="send-feedback" type='submit' class="button is-primary mt-4 is-fullwidth">
                         <img src="img/envelope.svg" class="mr-2">
                         Отправить отзыв
                     </button>

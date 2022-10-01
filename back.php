@@ -1,25 +1,32 @@
 <?php
 require_once('settings.php');
 
-$data = json_decode(file_get_contents('php://input'),true);
-// $comment = wordwrap($data['comment'], 65, "<br />\n");
+$data = $_POST;
+$fileData = $_FILES;
+
 $comment = $data['comment'];
 
 if (isset($data['address'])) {
+    $filePath = 'files/' . time() . '.' . explode('.', $fileData['photo']['name'])[1];
+    $fileUrl = 'https://' . $_SERVER['SERVER_NAME'] . preg_replace('{/[a-z]*\.php}', '/' . $filePath, $_SERVER['PHP_SELF']);
+    copy($fileData['photo']['tmp_name'], $filePath);
+
     $subject = 'Отзыв на франшизу с сайта' . "\r\n";
-    $message = "Имя: {$data['name']}\r\n
-Город: {$data['city']}\r\n
-E-mail: {$data['email']}\r\n
-Телефон: {$data['phone']}\r\n
-Адрес торговой точки: {$data['address']}\r\n
-Комментарий: {$comment}";
+    $message = "<p>Имя: {$data['name']}</p>
+                <p>Город: {$data['city']}</p>
+                <p>E-mail: {$data['email']}</p>
+                <p>Телефон: {$data['phone']}</p>
+                <p>Адрес торговой точки: {$data['address']}</p>
+                <p>Комментарий: {$comment}</p>
+                <img src=" . $fileUrl . ">";
+
 } else {
     $subject = 'Заявка на франшизу с сайта' . "\r\n";
-    $message = "Имя: {$data['name']}" . "\r\n" .
-        "Город: {$data['city']}" . "\r\n" .
-        "E-mail: {$data['email']}" . "\r\n" .
-        "Телефон: {$data['phone']}" . "\r\n" .
-        "Комментарий: {$comment}";
+    $message = "<p>Имя: {$data['name']}</p>
+                <p>Город: {$data['city']}</p>
+                <p>E-mail: {$data['email']}</p>
+                <p>Телефон: {$data['phone']}</p>
+                <p>Комментарий: {$comment}</p>";
 };
 
 $headers = 'From: ' . EMAIL . "\r\n" .

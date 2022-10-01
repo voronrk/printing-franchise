@@ -79,64 +79,49 @@ modalClose.forEach((item) => {
         document.querySelector('#no-email-feedback').classList.add('is-hidden');
         document.querySelector('#no-phone-feedback').classList.add('is-hidden');
         document.querySelector('#no-address-feedback').classList.add('is-hidden');
-        // document.querySelector('#no-photo-feedback').classList.add('is-hidden');
+        document.querySelector('#no-photo-feedback').classList.add('is-hidden');
         document.querySelector('#no-comment-feedback').classList.add('is-hidden');
     });
 });
 
-btnSendOrder.addEventListener('click', (e) => {
+orderForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    formData = {
-        'name': orderForm.elements.name.value,
-        'city': orderForm.elements.city.value,
-        'email': orderForm.elements.email.value,
-        'phone': orderForm.elements.phone.value,
-        'comment': orderForm.elements.comment.value
-    };
-    if (formValidate(formData)) {
-        sendOrder(formData)
-            .then((result) => {
-                if(result) {
-                    document.querySelector('#sending-error').classList.add('is-hidden');
-                    modalForm.classList.remove('is-active');
-                    orderForm.reset();
-                    modalMessageText.innerText = 'Заявка отправлена';
-                    modalMessage.classList.add('is-active');
-                } else {
-                    document.querySelector('#sending-error').classList.remove('is-hidden');
-                }
-            });
-    };
+    let formData = new FormData(orderForm);
+
+    sendOrder(formData)
+        .then((result) => {
+            if(result) {
+                document.querySelector('#sending-error').classList.add('is-hidden');
+                modalForm.classList.remove('is-active');
+                orderForm.reset();
+                modalMessageText.innerText = 'Заявка отправлена';
+                modalMessage.classList.add('is-active');
+            } else {
+                document.querySelector('#sending-error').classList.remove('is-hidden');
+            }
+        });
 });
 
 btnFeedback.addEventListener('click', () => {
     modalFeedback.classList.add('is-active');
 });
 
-btnSendFeedback.addEventListener('click', (e) => {
+feedbackForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    formData = {
-        'name': feedbackForm.elements.name.value,
-        'city': feedbackForm.elements.city.value,
-        'email': feedbackForm.elements.email.value,
-        'phone': feedbackForm.elements.phone.value,
-        'address': feedbackForm.elements.address.value,
-        'comment': feedbackForm.elements.comment.value
-    };
-    if (feedbackValidate(formData)) {
-        sendOrder(formData)
-            .then((result) => {
-                if(result) {
-                    document.querySelector('#sending-error-feedback').classList.add('is-hidden');
-                    modalFeedback.classList.remove('is-active');
-                    feedbackForm.reset();
-                    modalMessageText.innerText = 'Отзыв отправлен';
-                    modalMessage.classList.add('is-active');
-                } else {
-                    document.querySelector('#sending-error-feedback').classList.remove('is-hidden');
-                }
-            });
-    };
+    let formData = new FormData(feedbackForm);
+
+    sendFeedback(formData)
+        .then((result) => {
+            if(result) {
+                document.querySelector('#sending-error-feedback').classList.add('is-hidden');
+                modalFeedback.classList.remove('is-active');
+                feedbackForm.reset();
+                modalMessageText.innerText = 'Отзыв отправлен';
+                modalMessage.classList.add('is-active');
+            } else {
+                document.querySelector('#sending-error-feedback').classList.remove('is-hidden');
+            }
+        });
 });
 
 //---------------functions---------------------------
@@ -213,8 +198,15 @@ function feedbackValidate(formData) {
 async function sendOrder(formData) {
     const response = await fetch ('back.php', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(formData)
+        body: formData
+    });
+    return await response.json();
+};
+
+async function sendFeedback(formData) {
+    const response = await fetch ('back.php', {
+        method: 'POST',
+        body: formData
     });
     return await response.json();
 };
