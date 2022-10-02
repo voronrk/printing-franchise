@@ -196,7 +196,7 @@ function feedbackValidate(formData) {
 }
 
 async function sendOrder(formData) {
-    const response = await fetch ('back.php', {
+    const response = await fetch ('/api/mail/franchise', {
         method: 'POST',
         body: formData
     });
@@ -204,7 +204,7 @@ async function sendOrder(formData) {
 };
 
 async function sendFeedback(formData) {
-    const response = await fetch ('back.php', {
+    const response = await fetch ('/api/mail/franchise', {
         method: 'POST',
         body: formData
     });
