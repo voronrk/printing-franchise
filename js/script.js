@@ -105,7 +105,7 @@ function formValidate(formData) {
 }
 
 async function sendOrder(formData) {
-    const response = await fetch ('/api/mail/franchise', {
+    const response = await fetch ('https://api.printing.ru/api/mailable/partner/franchise', {
         method: 'POST',
         body: formData
     });
