@@ -33,8 +33,8 @@ $(document).ready(function(){
             }
         },
         navText: [
-            '<img src="img/arrow_left_gray.svg" alt="left" title="left" width="40" height="43">',
-            '<img src="img/arrow_right_gray.svg" alt="left" title="left" width="40" height="43">'
+            '<img src="img/arrow_left.png" alt="left" title="left" width="40" height="43">',
+            '<img src="img/arrow_right.png" alt="left" title="left" width="40" height="43">'
         ]
     })
   });
